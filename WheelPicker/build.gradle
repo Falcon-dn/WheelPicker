@@ -1,4 +1,31 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    bintrayRepo = 'Wheelpicker'
+    bintrayName = 'WheelPicker'
+
+    publishedGroupId = 'com.github.Falcon-dn'
+    libraryName = 'WheelPicker-WheelPicker'
+    artifact = 'wheelpicker'
+
+    libraryDescription = 'This is library wheel picker for android'
+
+    siteUrl = 'https://github.com/Falcon-dn/WheelPicker'
+    gitUrl = 'git@github.com:Falcon-dn/WheelPicker.git'
+
+    libraryVersion = '1.1.2'
+
+    developerId = 'tdt'
+    developerName = 'Dac Tri'
+    developerEmail = 'skyphantomhz@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
@@ -21,3 +48,5 @@ android {
 dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
 }
+
+apply from: 'https://raw.githubusercontent.com/LissF/JCenter/master/script.gradle'
